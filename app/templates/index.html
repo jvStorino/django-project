@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Testando</title>
 </head>
 <body>
-    hello world
+    <ul>
+        {% for pessoa in pessoas %}
+            <li>{{pessoa.id}} - {{pessoa.nome}}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
