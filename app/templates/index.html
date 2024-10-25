@@ -11,5 +11,11 @@
             <li>{{pessoa.id}} - {{pessoa.nome}}</li>
         {% endfor %}
     </ul>
+
+    <form action="{% url 'cadastrar' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="nome">
+        <button type="submit">Cadastrar</button>
+    </form>
 </body>
 </html>
