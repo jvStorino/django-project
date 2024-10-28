@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testando</title>
+    <title>Cadastrar</title>
 </head>
 <body>
     <ul>
         {% for pessoa in pessoas %}
-            <li>{{pessoa.id}} - {{pessoa.nome}}</li>
+            <li>{{pessoa.id}} - {{pessoa.nome}} <a href="{% url 'editar' pessoa.id %}">Editar</a></li>
         {% endfor %}
     </ul>
 
