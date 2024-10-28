@@ -1,8 +1,8 @@
 # Cadastro de Pessoas - Django CRUD
 
-Este projeto é uma aplicação web construída com Django para realizar operações de CRUD (Create, Read, Update, Delete) em um banco de dados de pessoas. É possível 
+Este projeto é uma aplicação web construída com Django para realizar operações de CRUD (Create, Read, Update, Delete) em um banco de dados de pessoas. 
 
-cadastrar, visualizar, atualizar e excluir registros, além de exibir o nome e o ID das pessoas cadastradas na tela.
+É possível cadastrar, visualizar, atualizar e excluir registros, além de exibir o nome e o ID das pessoas cadastradas na tela.
 
 
 ## 🚀 Funcionalidades
