@@ -21,5 +21,11 @@
         <input type="text" name="nome">
         <button type="submit">Cadastrar</button>
     </form>
+
+    <a class="btn btn-outline-danger" href="{% url 'logout' %}">Sair</a>
+    <a class="btn btn-outline-primary" href="{% url 'login' %}">Entrar</a>
+    <a class="btn btn-success" href="{% url 'register' %}">Registrar</a>
+    <a href="{% url 'password_reset' %}">Esqueci minha senha</a>
+    
 </body>
 </html>
