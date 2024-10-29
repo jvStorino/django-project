@@ -28,3 +28,22 @@ Certifique-se de ter o Python instalado.
    python -m venv venv
    source venv/bin/activate  # Linux/macOS
    .\venv\Scripts\activate  # Windows
+
+2. **Instale as dependências:**
+   ```bash
+   pip install -r requirements.txt
+
+3. **Realize as migrações:**
+   ```bash
+   python manage.py migrate
+
+4. **Crie um superusuário para acessar o admin:**
+   ```bash
+   python manage.py createsuperuser
+
+5.**Inicie o servidor:**
+   ```bash
+   python manage.py runserver
+
+
+
