@@ -1,0 +1,29 @@
+<!-- buscar_pessoa.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Pessoa</title>
+</head>
+<body>
+    <h1>Buscar Pessoa</h1>
+    <form method="get" action="{% url 'buscar_pessoa' %}">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome">
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if pessoas %}
+        <h2>Resultados da Busca:</h2>
+        <ul>
+            {% for pessoa in pessoas %}
+                <li>{{ pessoa.nome }} | Número: {{pessoa.numero}} | CPF: {{pessoa.cpf}} | Endereço: {{pessoa.endereco}}</li>
+            {% endfor %}
+        </ul>
+    {% elif nome %}
+        <p>Nenhuma pessoa encontrada com o nome "{{ nome }}".</p>
+    {% endif %}
+    <a href="{% url 'home'%}">Voltar</a>
+</body>
+</html>
