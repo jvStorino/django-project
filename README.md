@@ -41,7 +41,7 @@ Certifique-se de ter o Python instalado.
    ```bash
    python manage.py createsuperuser
 
-5.**Inicie o servidor:**
+5. **Inicie o servidor:**
    ```bash
    python manage.py runserver
 
