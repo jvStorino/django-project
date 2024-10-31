@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Pessoa
 
+
 def home(request):
     pessoas = Pessoa.objects.all()
     return render(request, 'index.html', {'pessoas': pessoas})

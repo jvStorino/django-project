@@ -17,23 +17,28 @@
         {% endfor %}
     </ul>
 
-    <form action="{% url 'cadastrar' %}" method="post">
-        {% csrf_token %}
-        <input type="text" name="nome" placeholder="Digite o Nome">
+    {% if user.is_authenticated %}
+        <form action="{% url 'cadastrar' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="nome" placeholder="Digite o Nome">
+            <br>
+            <input type="text" name="numero" placeholder="Digite o Número">
+            <br>
+            <input type="text" name="cpf" placeholder="Digite o CPF">
+            <br>
+            <input type="text" name="endereco" placeholder="Digite o Endereço">
+            <br>
+            <button type="submit">Cadastrar</button>
+        </form>
         <br>
-        <input type="text" name="numero" placeholder="Digite o Número">
-        <br>
-        <input type="text" name="cpf" placeholder="Digite o CPF">
-        <br>
-        <input type="text" name="endereco" placeholder="Digite o Endereço">
-        <br>
-        <button type="submit">Cadastrar</button>
-    </form>
-
+        <a href="{% url 'buscar_pessoa' %}">Buscar Pessoa</a>
+    {% endif %}
+    
+    <br>
     <a href="{% url 'login' %}">Login</a>
-    <a href="{% url 'home' %}">Logout</a>
+    <br>
     <a href="{% url 'register' %}">Registrar</a>
-    <a href="{% url 'buscar_pessoa' %}">Buscar Pessoa</a>
+    <br>
     
 </body>
 </html>
