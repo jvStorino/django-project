@@ -32,13 +32,14 @@
         </form>
         <br>
         <a href="{% url 'buscar_pessoa' %}">Buscar Pessoa</a>
+        <br>
+        <a href="{% url 'logout' %}">Sair</a>
+
+    {% else %}
+        <a href="{% url 'login' %}">Login</a>
+        <br>
+        <a href="{% url 'register' %}">Registrar</a>
+        <br>
     {% endif %}
-    
-    <br>
-    <a href="{% url 'login' %}">Login</a>
-    <br>
-    <a href="{% url 'register' %}">Registrar</a>
-    <br>
-    
 </body>
 </html>
