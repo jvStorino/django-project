@@ -6,18 +6,20 @@
     <title>Cadastrar</title>
 </head>
 <body>
-    <ul>
-        {% for pessoa in pessoas %}
-            <li>
-                {{pessoa.id}} - {{pessoa.nome}} - {{pessoa.numero}} - {{pessoa.cpf}} - {{pessoa.endereco}}
-                <a href="{% url 'editar' pessoa.id %}">Editar</a>
-                <a href="{% url 'delete' pessoa.id %}">Deletar</a>
-            </li>
-        {% endfor %}
-    </ul>
 
     {% if user.is_authenticated %}
-        <div>id - nome - numero - cpf - endereço</div>
+
+        <h2>ID | NOME | NÚMERO | ENDEREÇO</h2>
+        <ul>
+            {% for pessoa in pessoas %}
+                <li>
+                    {{pessoa.id}} - {{pessoa.nome}} - {{pessoa.numero}} - {{pessoa.cpf}} - {{pessoa.endereco}}
+                    <a href="{% url 'editar' pessoa.id %}">Editar</a>
+                    <a href="{% url 'delete' pessoa.id %}">Deletar</a>
+                </li>
+            {% endfor %}
+        </ul>
+
         <form action="{% url 'cadastrar' %}" method="post">
             {% csrf_token %}
             <input type="text" name="nome" placeholder="Digite o Nome">
