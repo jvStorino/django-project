@@ -6,7 +6,6 @@ Este projeto é uma aplicação web construída com Django para realizar operaç
 
 - **CRUD completo:** Cadastrar, visualizar, atualizar e excluir registros de pessoas.
 - **Sistema de Login e Registro:** Acesso restrito para usuários autenticados.
-- **Reset de Senha:** Recuperação de senha por e-mail.
 - **Exibir lista de pessoas:** Mostrar nome e ID dos registros cadastrados.
 
 ---
